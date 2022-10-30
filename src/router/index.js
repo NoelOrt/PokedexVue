@@ -21,11 +21,7 @@ const router = createRouter({
       props: true,
       component: () => import('../views/BatallaView.vue')
     },
-    {
-      path: '/vistas/:id',
-      name: 'vistas',
-      component: () => import('../views/VistasView.vue')
-    }
+   
   ]
 })
 

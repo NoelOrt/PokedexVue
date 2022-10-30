@@ -19,7 +19,7 @@ export default{
         }
         for(var k=0;k<10;k++){
             if(coincide[k]==0){
-                //console.log('pokemon_card'+k)
+             
             document.getElementById('pokemon_card'+k).style.display = '';}
             else{document.getElementById('pokemon_card'+k).style.display = 'none';}
         }

@@ -2,7 +2,6 @@
 import{ref} from 'vue'
 import {set} from '@/hooks/useSet.js'
 import SetPoke from '@/services/SetPoke.js'
-import logo from '@/img/PokeLogo.png'
 import inte from '@/img/inte.png'
 import GetPoke from '../services/GetPoke';
 import cont from '../services/cont.js';

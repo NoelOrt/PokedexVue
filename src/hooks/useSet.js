@@ -3,7 +3,7 @@ import setPokemonCard from '../services/SetPoke'
 const set= {
     seter(){
         return setPokemonCard(ind, id).then ((respuesta) =>{ 
-            console.log('funciona?')
+            
     })
         
         

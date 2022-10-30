@@ -5,16 +5,11 @@ import cont from '../services/cont.js';
 import { ref, computed } from 'vue'
 import Batalla from '../services/Batalla';
 const props=defineProps(['conta'])
-console.log(props.conta.val.value)
 
 function augmentar(){
     if(cont.contador.value==2){
     Batalla.batalla()
     cont.augmentar()
-    
-    var x=JSON.parse(localStorage.getItem('poke1'))
-    var y=JSON.parse(localStorage.getItem('poke2'))
-    console.log(x,y)
     return
     }
 

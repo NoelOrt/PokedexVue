@@ -21,7 +21,6 @@ onMounted(async ()=>{
         arrayid.value.push(j) 
         localStorage.setItem('Poke'+j ,JSON.stringify( respuesta.data))
         var x=JSON.parse(localStorage.getItem('Poke'+j))
-        //console.log(x)
         j++
 
         

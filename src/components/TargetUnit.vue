@@ -1,6 +1,5 @@
 <script setup>
 
-//console.log('entra en targetunit')
 const props=defineProps(['poke'])
 let id=props.poke.id
 var nTypes=props.poke.types.length

@@ -1,11 +1,11 @@
 <script setup>
 import CriaCard from './CriaCard.vue';
-
+import Theme from '@/services/Theme.js'
 const props=defineProps(['aray'])
 </script>
 
 <template>
-    <article class="panel">
+    <article :class="Theme.theme.value === 'light' ? 'light-theme' : 'dark-theme'"  class="panel">
         <CriaCard v-for="(poke, index) in props.aray" :key="poke.id" :poke="poke" :index="index"/>
 
                 

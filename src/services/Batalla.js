@@ -21,7 +21,6 @@ export default {
         win2.value=1
         win3.value=1
         localStorage.setItem("win", 2);
-        console.log(win.value)
         resumen.value= pokemon1.name.toUpperCase()+' ataca y pierde contra '+pokemon2.name.toUpperCase();
     }
     else if(pokemon1.stats[1].base_stat>pokemon2.stats[2].base_stat){
@@ -29,7 +28,6 @@ export default {
         win.value=pokemon1;
         win2.value=1
         win3.value=1
-        console.log(win.value)
         resumen.value=pokemon1.name.toUpperCase()+' '+' ataca y gana contra '+' '+ pokemon2.name.toUpperCase();
 
     }
@@ -44,10 +42,8 @@ export default {
     
     if(win.value==3){
         win3.value=0
-        console.log('empate!!!!')
         let id=pokemon1.id+' VS '+pokemon2.id
         var nTypes=0
-
         let src=pokemon1.sprites.front_default
         let src2=pokemon2.sprites.back_default
         let pokemon_name$=pokemon1.name+' VS '+pokemon2.name
@@ -76,7 +72,6 @@ export default {
         else{
             let id=win.value.id
             var nTypes=win.value.types.length
-
             let src=win.value.sprites.front_default
             let src2=win.value.sprites.back_default
             let pokemon_name$=win.value.name
@@ -90,11 +85,10 @@ export default {
             let attr, type
             let attr1, type1  
             let attr2 , type2 
-            console.log('condicionados prueba')
             for(var i=0;i<nTypes;i++){
-                if(j==0){attribute='attribute', attr=pokemon1.types[j].type.name, type='type'}
-                if(j==1){attribute1='attribute',attr1=pokemon1.types[j].type.name, type1='type 1'}
-                if(j==2){attribute2='attribute',attr2=pokemon1.types[j].type.name, type2='type 2'}
+                if(j==0){attribute='attribute', attr=win.value.types[j].type.name, type='type'}
+                if(j==1){attribute1='attribute',win.value.types[j].type.name, type1='type 1'}
+                if(j==2){attribute2='attribute',win.value.types[j].type.name, type2='type 2'}
                 j++
 
             }
@@ -102,7 +96,7 @@ export default {
             pokemon_abilities$,attribute, attribute1, attribute2,j,attr, attr1, attr2,type,type1
             ,type2, resumen.value]
         }
-    console.log(winarr.value)
+    
     return win , win2;
 },
 win,

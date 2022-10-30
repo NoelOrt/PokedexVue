@@ -11,7 +11,6 @@ export default {
     if(contador.value<2){val.value='SELECIONA LUCHADORES!!!'}
     if(contador.value==2){val.value='EMPEZAR BATALLA!'}
     if(contador.value==3){val.value='¡Reiniciar!'}
-    console.log(contador.value, val.value)
     return val.value,contador.value
   
     

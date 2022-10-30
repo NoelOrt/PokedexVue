@@ -64,7 +64,7 @@ ul{list-style: none;}
 }
 .dark-theme {
     background-color: var(--dark);
-    color:  rgb(160, 11, 141);
+    color:  rgb(71, 11, 160);
 }
   
 </style>

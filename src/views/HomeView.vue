@@ -4,7 +4,6 @@ import SearchForm from '../components/SearchForm.vue';
 import Targets from '../components/Targets.vue';
 import { services } from '../hooks/useFetchPoke.js';
 import { ref, computed } from 'vue'
-
 import { defineStore } from 'pinia'
 import GetPoke from '../services/GetPoke';
 const arrayPoke=ref([]);
