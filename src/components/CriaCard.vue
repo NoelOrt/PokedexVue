@@ -12,7 +12,7 @@ let pokemon_attack$='pokemon_attack'+id
 let pokemon_defenses$='pokemon_defenses'+id
 let pokemon_abilities$='pokemon_abilities'+id
 
-
+//Componente repetido 
 
 </script>
 

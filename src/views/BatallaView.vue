@@ -15,6 +15,9 @@ const arrayPoke=ref([]);
 const arrayid=ref([]);
 let j=0
 onMounted(async ()=>{
+
+    //En el componente Home ya se están guardando los pokemons, aqui es redundante llamar nuevos pokemons
+    // Si lo estas haciendo a posta, porque quieres nuevos pokemons para la pelean deberias seprarlo en un Hook.
     for(var i=0;i<10;i++){
     GetPoke.getAllPokemons().then ((respuesta) =>{ 
         arrayPoke.value.push(respuesta.data) 
@@ -22,19 +25,15 @@ onMounted(async ()=>{
         localStorage.setItem('Poke'+j ,JSON.stringify( respuesta.data))
         var x=JSON.parse(localStorage.getItem('Poke'+j))
         j++
-
-        
     })
     
 }})
 console.log(Batalla.win2)
 
-
-
 </script>
 
 <template>
-<BattelButton :conta="cont"/>
-<WinVue :ver="Batalla.win2.value" :ver1="Batalla.win3.value" :winarr="Batalla.winarr.value"/>
-<BatTargets :aray="arrayPoke" />
+    <BattelButton :conta="cont"/>
+    <WinVue :ver="Batalla.win2.value" :ver1="Batalla.win3.value" :winarr="Batalla.winarr.value"/>
+    <BatTargets :aray="arrayPoke" />
 </template>

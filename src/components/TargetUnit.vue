@@ -7,6 +7,7 @@ const pokemon_img$='pokemon_img3'
 const pokemon_img2$='pokemon_img23'
 let src=props.poke.sprites.front_default
 let src2=props.poke.sprites.back_default
+// Vue hace que cada clase sea unica todo esto es innecesario
 let pokemon_name$='pokemon_name'+id
 let pokemon_attack$='pokemon_attack'+id
 let pokemon_defenses$='pokemon_defenses'+id
@@ -14,10 +15,13 @@ let pokemon_abilities$='pokemon_abilities'+id
 let attribute='0'
 let attribute1='0'
 let attribute2='0'
+/////////////////////////////// hasta aqui
 let j=0
 let attr, type
 let attr1, type1  
 let attr2 , type2 
+
+//Puede recorer los Types directamente en el elemento con el v-for, aqui estas utiliznado más JavaScript que Vue.
 for(var i=0;i<nTypes;i++){
     if(j==0){attribute='attribute', attr=props.poke.types[j].type.name, type='type'}
     if(j==1){attribute1='attribute',attr1=props.poke.types[j].type.name, type1='type 1'}

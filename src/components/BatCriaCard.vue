@@ -11,6 +11,7 @@ const poke=ref([]);
 let id=props.poke.id
 let ind=props.index
 
+//Componente repetido
 
 const pokemon_card$='pokemon_card'+ind
 const pokemon_img$='pokemon_img'+id

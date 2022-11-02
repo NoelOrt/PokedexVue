@@ -8,11 +8,11 @@ const props=defineProps(['conta'])
 
 function augmentar(){
     if(cont.contador.value==2){
-    Batalla.batalla()
-    cont.augmentar()
-    return
+        Batalla.batalla()
+        cont.augmentar()
+        return
     }
-
+    // Vue hace aplicaciones SPA (Single Page applications) si usas reload te estas cargando la filosofia de Vue.
     if(cont.contador.value==3) window.location.reload(), cont.rst;
     
 }
@@ -24,7 +24,6 @@ function augmentar(){
 
 <template>
     <div id="form">
-        
         <input type="submit" :value=props.conta.val.value @click="augmentar()">
     </div>
 </template>
