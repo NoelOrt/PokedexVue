@@ -25,6 +25,7 @@ const name=ref('????')
 const atack=ref('????')
 const defensa=ref('????')
 const abilities=ref('????')
+
 function setpokemon(id, ind){
     
     GetPoke.getPokemon(id).then((respuesta)=>{
@@ -34,11 +35,12 @@ function setpokemon(id, ind){
         
     }
 )}
-function augmentar(){
-    if(cont.contador.value<2){
-    cont.augmentar()
-    setpokemon(id, ind)}
-    
+
+function augmentar() {
+    if(cont.contador.value < 2){
+        cont.augmentar()
+        setpokemon(id, ind)
+    }    
 }
 
 </script>
